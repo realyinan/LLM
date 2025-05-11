@@ -2,8 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/GPT2_Chatbot" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/GPT2_Chatbot/data_preprocess" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PET" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="NLP" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

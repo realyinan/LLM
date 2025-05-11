@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>小健康</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+
+        .chat-box {
+            width: 60%;
+            max-width: 800px;
+            min-width: 300px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .chat-history {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            padding: 10px;
+            background-color: #fafafa;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .user-msg {
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .bot-msg {
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <h1>小健康</h1>
+
+    <div class="chat-box">
+        <div class="chat-history" id="chat-history"></div>
+
+        <div class="input-row">
+            <input type="text" id="question" placeholder="请输入您的健康问题，例如：感冒了怎么办？">
+            <button onclick="submitQuestion()">提交</button>
+        </div>
+    </div>
+
+    <script>
+        function appendMessage(role, text) {
+            const chatHistory = document.getElementById('chat-history');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = role === 'user' ? 'user-msg' : 'bot-msg';
+            messageDiv.textContent = (role === 'user' ? '你：' : '小健康：') + text;
+            chatHistory.appendChild(messageDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        function submitQuestion() {
+            const input = document.getElementById('question');
+            const question = input.value.trim();
+            if (!question) return;
+
+            appendMessage('user', question);
+            input.value = '';
+
+            fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: question })
+            })
+            .then(response => response.json())
+            .then(data => {
+                appendMessage('bot', data.answer);
+            })
+            .catch(error => {
+                appendMessage('bot', '出错了，请稍后再试。');
+            });
+        }
+
+        document.getElementById('question').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                submitQuestion();
+            }
+        });
+    </script>
+</body>
+</html>

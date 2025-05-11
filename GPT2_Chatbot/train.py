@@ -19,10 +19,11 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, epoch, params):
     total_loss = 0  # 记录下整个epoch的loss总和
     epoch_correct_num, epoch_total_num = 0, 0  # 预测正确的个数, 总的个数
 
-    for batch_index, (input_ids, labels) in enumerate(tqdm(train_dataloader), start=1):
-        input_ids = input_ids.to(params.device)
-        labels = labels.to(params.device)
-        outputs = model(input_ids, labels=labels)
+    for batch_index, (input_ids, labels) in enumerate(tqdm(train_dataloader)):
+        input_ids = input_ids.to(params.device)  # [4, 300]
+        labels = labels.to(params.device)  # [4, 300]
+
+        outputs = model(input_ids, labels=labels)  # [4, 300, 13317]
         logits = outputs.logits
         loss = outputs.loss
         # 统计该batch预测token的正确数与总数
@@ -32,10 +33,73 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, epoch, params):
         epoch_correct_num += batch_correct_num
         epoch_total_num += batch_total_num
         total_loss += loss.item()
-        
+
+        # self.gradient_accumulation_steps = 4， 累积的步数
+        if params.gradient_accumulation_steps > 1:
+            loss = loss / params.gradient_accumulation_steps
+
+        loss.backward()
+        """这行代码的作用是 防止梯度爆炸（gradient explosion），通过对模型中所有参数的梯度进行 范数裁剪（gradient clipping）。首先计算所有参数的梯度的总范数（L2 范数）：如果 total_norm > max_grad_norm，就把所有的梯度按比例缩小，使总范数正好等于 max_grad_norm。缩放的比例是 max_grad_norm / total_norm
+        """
+        torch.nn.utils.clip_grad_norm_(model.parameters(), params.max_grad_norm)
+
+        # 进行一定step的梯度累计之后, 更新参数
+        if (batch_index + 1) % params.gradient_accumulation_steps == 0:
+            # 更新参数
+            optimizer.step()
+            # 更新学习率
+            scheduler.step()
+            # 清空梯度信息
+            optimizer.zero_grad()
+
+        # 打印日志
+        if (batch_index + 1) % params.loss_step == 0:
+            print("batch {} of epoch {}, loss {}, batch_acc {}, lr {}".format(
+                batch_index + 1, epoch + 1, loss.item() * params.gradient_accumulation_steps, batch_acc, scheduler.get_last_lr()))
+
+        # 数据清楚, 防止占用内存
+        del input_ids, outputs
+
+    # 记录当前epoch的平均loss与accuracy
+    epoch_mean_loss = total_loss / len(train_dataloader)
+    epoch_mean_acc = epoch_correct_num / epoch_total_num
+    print("epoch {}: loss {}, predict_acc {}".format(epoch + 1, epoch_mean_loss, epoch_mean_acc))
+
+    # save model
+    print('saving model for epoch {}'.format(epoch + 1))
+    model_path = os.path.join(params.save_model_path, 'epoch{}'.format(epoch + 1))
+    if not os.path.exists(model_path):
+        os.mkdir(model_path)
+    # 保存预训练模型的方式
+    model.save_pretrained(model_path)
+    print('epoch {} finished'.format(epoch + 1))
+    epoch_finish_time = datetime.now()
+    print('time for one epoch: {}'.format(epoch_finish_time - epoch_start_time))
+
+    return epoch_mean_loss
 
 
+def valid_epoch(model, valid_dataloader,epoch, params):
+    print("start validating")
+    model.eval()
+    epoch_start_time = datetime.now()
+    total_loss = 0
+    with torch.no_grad():
+        for batch_index, (input_ids, labels) in enumerate(tqdm(valid_dataloader)):
+            input_ids = input_ids.to(params.device)  # [4, 300]
+            labels = labels.to(params.device)  # [4, 300]
 
+            outputs = model(input_ids, labels=labels)  # [4, 300, 13317]
+            loss = outputs.loss
+
+            total_loss += loss.item()
+            del input_ids, outputs
+        # 记录当前epoch的平均loss
+        epoch_mean_loss = total_loss / len(valid_dataloader)
+        print("validate epoch {}: loss {}".format(epoch+1, epoch_mean_loss))
+        epoch_finish_time = datetime.now()
+        print('time for validating one epoch: {}'.format(epoch_finish_time - epoch_start_time))
+        return epoch_mean_loss
 
 
 def train(model, train_dataloader, valid_dataloader, params):
@@ -68,13 +132,23 @@ def train(model, train_dataloader, valid_dataloader, params):
             optimizer=optimizer, scheduler=scheduler,
             epoch=epoch, params=params
         )
-        # validate
-        # valid_loss = valid_epoch(
-        #     model=model, valid_dataloader=valid_dataloader,
-        #     epoch=epoch, params=params
-        # )
-        break
+        train_losses.append(train_loss)
 
+        # validate
+        valid_loss = valid_epoch(
+            model=model, valid_dataloader=valid_dataloader,
+            epoch=epoch, params=params
+        )
+        validate_losses.append(valid_loss)
+
+        # 保存当前困惑度最低的模型，困惑度低，模型的生成效果不一定会越好
+        if valid_loss < best_val_loss:
+            best_val_loss = valid_loss
+            print('saving current best model for epoch {}'.format(epoch + 1))
+            model_path = os.path.join(params.save_model_path, 'min_ppl_epoch{}'.format(epoch + 1))
+            if not os.path.exists(model_path):
+                os.mkdir(model_path)
+            model.save_pretrained(model_path)
 
 
 def main():

@@ -27,11 +27,11 @@ class ParameterConfig():
         self.topk = 4 #'最高k选1。默认8'
         self.batch_size = 4 #一个批次几个样本
         self.epochs = 4 # 训练几轮
-        self.loss_step = 1 # 多少步汇报一次loss
+        self.loss_step = 100 # 多少步汇报一次loss
         self.lr = 2.6e-5
         # eps，为了增加数值计算的稳定性而加到分母里的项，其为了防止在实现中除以零
         self.eps = 1.0e-09
-        self.max_grad_norm = 4.0
+        self.max_grad_norm = 10.0
         self.gradient_accumulation_steps = 4
         # 默认.warmup_steps = 4000
         self.warmup_steps = 100 # 使用Warmup预热学习率的方式,即先用最初的小学习率训练，然后每个step增大一点点，直到达到最初设置的比较大的学习率时（注：此时预热学习率完成），采用最初设置的学习率进行训练（注：预热学习率完成后的训练过程，学习率是衰减的），有助于使模型收敛速度变快，效果更佳。

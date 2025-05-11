@@ -32,6 +32,6 @@ def data_preprocess(train_txt_path, train_pkl_path):
 
 
 if __name__ == '__main__':
-    train_txt_path = "../data/medical_train.txt"
-    train_pkl_path = "../data/medical_train.pkl"
+    train_txt_path = "../data/medical_valid.txt"
+    train_pkl_path = "../data/medical_valid.pkl"
     data_preprocess(train_txt_path, train_pkl_path)
