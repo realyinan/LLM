@@ -10,7 +10,7 @@ class ProjectConfig(object):
         self.prompt_file = r'C:\Users\19981\Documents\GitHub\LLM\PET\data\prompt.txt'
         self.verbalizer = r'C:\Users\19981\Documents\GitHub\LLM\PET\data\verbalizer.txt'
         self.max_seq_len = 256
-        self.batch_size = 8
+        self.batch_size = 2
         self.learning_rate = 5e-5
         self.weight_decay = 0
         self.warmup_ratio = 0.06
