@@ -1,0 +1,406 @@
+C:\Users\19981\anaconda3\envs\NLP\python.exe C:\Users\19981\Documents\GitHub\LLM\PET\train.py
+Some weights of the model checkpoint at C:\Users\19981\Documents\GitHub\LLM\bert-base-chinese were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+  0%|          | 0/32 [00:00<?, ?it/s]开始训练
+  6%|▋         | 2/32 [00:00<00:07,  3.81it/s]global step: 2, epoch: 0, loss: 2.46828, speed: 3.92 step/s
+ 12%|█▎        | 4/32 [00:00<00:05,  5.43it/s]global step: 4, epoch: 0, loss: 2.85491, speed: 11.25 step/s
+global step: 6, epoch: 0, loss: 2.71220, speed: 11.07 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.55it/s]global step: 8, epoch: 0, loss: 2.66221, speed: 11.31 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.76it/s]global step: 10, epoch: 0, loss: 2.39725, speed: 11.08 step/s
+global step: 12, epoch: 0, loss: 2.19458, speed: 11.22 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.96it/s]global step: 14, epoch: 0, loss: 2.17013, speed: 10.98 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  7.01it/s]global step: 16, epoch: 0, loss: 1.93369, speed: 11.00 step/s
+global step: 18, epoch: 0, loss: 1.73520, speed: 10.98 step/s
+ 62%|██████▎   | 20/32 [00:03<00:01,  7.04it/s]global step: 20, epoch: 0, loss: 1.65987, speed: 10.91 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  7.06it/s]global step: 22, epoch: 0, loss: 1.59483, speed: 11.02 step/s
+global step: 24, epoch: 0, loss: 1.48961, speed: 10.96 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  7.06it/s]global step: 26, epoch: 0, loss: 1.41247, speed: 11.03 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  5.60it/s]global step: 28, epoch: 0, loss: 1.32362, speed: 4.60 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  5.89it/s]global step: 30, epoch: 0, loss: 1.25855, speed: 10.20 step/s
+global step: 32, epoch: 0, loss: 1.22463, speed: 10.47 step/s
+C:\Users\19981\anaconda3\envs\NLP\lib\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+Evaluation precision: 0.70000, recall: 0.72000, F1: 0.69000
+best F1 performence has been updated: 0.00000 --> 0.69000
+Each Class Metrics are: {'书籍': {'precision': 0.97, 'recall': 0.66, 'f1':
+0.78}, '平板': {'precision': 0.52, 'recall': 0.74, 'f1': 0.61}, '手机':
+{'precision': 0.0, 'recall': 0.0, 'f1': 0}, '水果': {'precision': 0.91,
+'recall': 0.8, 'f1': 0.85}, '洗浴': {'precision': 0.89, 'recall': 0.56, 'f1':
+0.69}, '电器': {'precision': 0.0, 'recall': 0.0, 'f1': 0}, '电脑':
+{'precision': 0, 'recall': 0.0, 'f1': 0}, '蒙牛': {'precision': 1.0, 'recall':
+0.58, 'f1': 0.73}, '衣服': {'precision': 0.61, 'recall': 0.92, 'f1': 0.73},
+'酒店': {'precision': 0.77, 'recall': 1.0, 'f1': 0.87}}
+100%|██████████| 32/32 [00:15<00:00,  2.06it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.85it/s]global step: 34, epoch: 1, loss: 1.15566, speed: 0.19 step/s
+global step: 36, epoch: 1, loss: 1.09427, speed: 10.80 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.97it/s]global step: 38, epoch: 1, loss: 1.05060, speed: 10.86 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.99it/s]global step: 40, epoch: 1, loss: 1.01626, speed: 10.63 step/s
+global step: 42, epoch: 1, loss: 0.96799, speed: 10.72 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  7.04it/s]global step: 44, epoch: 1, loss: 0.93133, speed: 11.04 step/s
+global step: 46, epoch: 1, loss: 0.93868, speed: 10.68 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.99it/s]global step: 48, epoch: 1, loss: 0.90971, speed: 10.80 step/s
+global step: 50, epoch: 1, loss: 0.89234, speed: 10.74 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.97it/s]global step: 52, epoch: 1, loss: 0.88956, speed: 10.68 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.98it/s]global step: 54, epoch: 1, loss: 0.87308, speed: 10.81 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.98it/s]global step: 56, epoch: 1, loss: 0.84337, speed: 10.60 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.98it/s]global step: 58, epoch: 1, loss: 0.82496, speed: 10.75 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.95it/s]global step: 60, epoch: 1, loss: 0.80126, speed: 10.61 step/s
+global step: 62, epoch: 1, loss: 0.80092, speed: 5.83 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.36it/s]global step: 64, epoch: 1, loss: 0.78946, speed: 9.29 step/s
+Evaluation precision: 0.77000, recall: 0.71000, F1: 0.72000
+best F1 performence has been updated: 0.69000 --> 0.72000
+Each Class Metrics are: {'书籍': {'precision': 1.0, 'recall': 0.45, 'f1':
+0.62}, '平板': {'precision': 0.73, 'recall': 0.6, 'f1': 0.66}, '手机':
+{'precision': 0.0, 'recall': 0.0, 'f1': 0}, '水果': {'precision': 0.96,
+'recall': 0.73, 'f1': 0.83}, '洗浴': {'precision': 0.46, 'recall': 0.83, 'f1':
+0.59}, '电器': {'precision': 0.0, 'recall': 0.0, 'f1': 0}, '电脑':
+{'precision': 0.69, 'recall': 0.69, 'f1': 0.69}, '蒙牛': {'precision': 1.0,
+'recall': 0.74, 'f1': 0.85}, '衣服': {'precision': 0.68, 'recall': 0.78, 'f1':
+0.73}, '酒店': {'precision': 0.99, 'recall': 0.92, 'f1': 0.95}}
+100%|██████████| 32/32 [00:15<00:00,  2.04it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.84it/s]global step: 66, epoch: 2, loss: 0.76809, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.90it/s]global step: 68, epoch: 2, loss: 0.75785, speed: 10.82 step/s
+global step: 70, epoch: 2, loss: 0.73855, speed: 10.17 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.83it/s]global step: 72, epoch: 2, loss: 0.71821, speed: 10.38 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.82it/s]global step: 74, epoch: 2, loss: 0.69885, speed: 10.46 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.88it/s]global step: 76, epoch: 2, loss: 0.68360, speed: 10.69 step/s
+global step: 78, epoch: 2, loss: 0.66676, speed: 10.71 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.86it/s]global step: 80, epoch: 2, loss: 0.65140, speed: 10.16 step/s
+global step: 82, epoch: 2, loss: 0.63673, speed: 10.84 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.90it/s]global step: 84, epoch: 2, loss: 0.62176, speed: 10.71 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.92it/s]global step: 86, epoch: 2, loss: 0.60740, speed: 10.88 step/s
+global step: 88, epoch: 2, loss: 0.59462, speed: 10.65 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.93it/s]global step: 90, epoch: 2, loss: 0.58170, speed: 10.83 step/s
+global step: 92, epoch: 2, loss: 0.58080, speed: 10.91 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.95it/s]global step: 94, epoch: 2, loss: 0.56878, speed: 10.69 step/s
+global step: 96, epoch: 2, loss: 0.55706, speed: 11.69 step/s
+Evaluation precision: 0.80000, recall: 0.75000, F1: 0.74000
+best F1 performence has been updated: 0.72000 --> 0.74000
+Each Class Metrics are: {'书籍': {'precision': 0.97, 'recall': 0.68, 'f1':
+0.8}, '平板': {'precision': 0.51, 'recall': 0.87, 'f1': 0.64}, '手机':
+{'precision': 0.5, 'recall': 0.06, 'f1': 0.11}, '水果': {'precision': 0.91,
+'recall': 0.82, 'f1': 0.86}, '洗浴': {'precision': 0.85, 'recall': 0.61, 'f1':
+0.71}, '电器': {'precision': 0.0, 'recall': 0.0, 'f1': 0}, '电脑':
+{'precision': 1.0, 'recall': 0.19, 'f1': 0.32}, '蒙牛': {'precision': 1.0,
+'recall': 0.84, 'f1': 0.91}, '衣服': {'precision': 0.64, 'recall': 0.83, 'f1':
+0.72}, '酒店': {'precision': 0.99, 'recall': 0.93, 'f1': 0.96}}
+100%|██████████| 32/32 [00:15<00:00,  2.10it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.97it/s]global step: 98, epoch: 3, loss: 0.54594, speed: 0.18 step/s
+global step: 100, epoch: 3, loss: 0.53628, speed: 10.70 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.95it/s]global step: 102, epoch: 3, loss: 0.52589, speed: 10.92 step/s
+global step: 104, epoch: 3, loss: 0.51578, speed: 10.63 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.94it/s]global step: 106, epoch: 3, loss: 0.50607, speed: 10.80 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.96it/s]global step: 108, epoch: 3, loss: 0.49730, speed: 10.93 step/s
+global step: 110, epoch: 3, loss: 0.48827, speed: 10.75 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.92it/s]global step: 112, epoch: 3, loss: 0.47957, speed: 10.57 step/s
+global step: 114, epoch: 3, loss: 0.47201, speed: 10.62 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.89it/s]global step: 116, epoch: 3, loss: 0.46388, speed: 10.67 step/s
+global step: 118, epoch: 3, loss: 0.45685, speed: 10.55 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.89it/s]global step: 120, epoch: 3, loss: 0.44928, speed: 10.74 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.94it/s]global step: 122, epoch: 3, loss: 0.44192, speed: 10.73 step/s
+global step: 124, epoch: 3, loss: 0.43480, speed: 10.73 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.95it/s]global step: 126, epoch: 3, loss: 0.42791, speed: 10.82 step/s
+global step: 128, epoch: 3, loss: 0.42123, speed: 11.71 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+best F1 performence has been updated: 0.74000 --> 0.77000
+Each Class Metrics are: {'书籍': {'precision': 0.97, 'recall': 0.73, 'f1':
+0.83}, '平板': {'precision': 0.56, 'recall': 0.86, 'f1': 0.68}, '手机':
+{'precision': 0.0, 'recall': 0.0, 'f1': 0}, '水果': {'precision': 0.99,
+'recall': 0.75, 'f1': 0.85}, '洗浴': {'precision': 0.74, 'recall': 0.75, 'f1':
+0.74}, '电器': {'precision': 0.17, 'recall': 0.33, 'f1': 0.22}, '电脑':
+{'precision': 0.83, 'recall': 0.47, 'f1': 0.6}, '蒙牛': {'precision': 1.0,
+'recall': 0.74, 'f1': 0.85}, '衣服': {'precision': 0.68, 'recall': 0.82, 'f1':
+0.74}, '酒店': {'precision': 0.99, 'recall': 0.98, 'f1': 0.98}}
+100%|██████████| 32/32 [00:15<00:00,  2.10it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.87it/s]global step: 130, epoch: 4, loss: 0.41476, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.88it/s]global step: 132, epoch: 4, loss: 0.40848, speed: 10.69 step/s
+global step: 134, epoch: 4, loss: 0.40241, speed: 10.53 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.83it/s]global step: 136, epoch: 4, loss: 0.39649, speed: 10.59 step/s
+global step: 138, epoch: 4, loss: 0.39075, speed: 10.78 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.89it/s]global step: 140, epoch: 4, loss: 0.38518, speed: 10.83 step/s
+global step: 142, epoch: 4, loss: 0.37977, speed: 10.44 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.88it/s]global step: 144, epoch: 4, loss: 0.37451, speed: 10.76 step/s
+global step: 146, epoch: 4, loss: 0.36939, speed: 10.66 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.89it/s]global step: 148, epoch: 4, loss: 0.36440, speed: 10.68 step/s
+global step: 150, epoch: 4, loss: 0.35954, speed: 10.72 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.91it/s]global step: 152, epoch: 4, loss: 0.35484, speed: 10.72 step/s
+global step: 154, epoch: 4, loss: 0.35024, speed: 10.79 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.92it/s]global step: 156, epoch: 4, loss: 0.34575, speed: 10.78 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.91it/s]global step: 158, epoch: 4, loss: 0.34138, speed: 10.68 step/s
+global step: 160, epoch: 4, loss: 0.33711, speed: 11.57 step/s
+Evaluation precision: 0.79000, recall: 0.76000, F1: 0.76000
+100%|██████████| 32/32 [00:15<00:00,  2.05it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.72it/s]global step: 162, epoch: 5, loss: 0.33296, speed: 0.18 step/s
+global step: 164, epoch: 5, loss: 0.32890, speed: 10.42 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.72it/s]global step: 166, epoch: 5, loss: 0.32494, speed: 10.48 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.73it/s]global step: 168, epoch: 5, loss: 0.32110, speed: 10.53 step/s
+global step: 170, epoch: 5, loss: 0.31733, speed: 10.66 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.78it/s]global step: 172, epoch: 5, loss: 0.31364, speed: 10.55 step/s
+global step: 174, epoch: 5, loss: 0.31004, speed: 10.62 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.80it/s]global step: 176, epoch: 5, loss: 0.30651, speed: 10.55 step/s
+global step: 178, epoch: 5, loss: 0.30308, speed: 10.65 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.81it/s]global step: 180, epoch: 5, loss: 0.29971, speed: 10.54 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.81it/s]global step: 182, epoch: 5, loss: 0.29643, speed: 10.63 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.82it/s]global step: 184, epoch: 5, loss: 0.29321, speed: 10.52 step/s
+global step: 186, epoch: 5, loss: 0.29006, speed: 10.82 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.90it/s]global step: 188, epoch: 5, loss: 0.28698, speed: 10.82 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.89it/s]global step: 190, epoch: 5, loss: 0.28396, speed: 10.68 step/s
+global step: 192, epoch: 5, loss: 0.28101, speed: 11.59 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+100%|██████████| 32/32 [00:15<00:00,  2.11it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.81it/s]global step: 194, epoch: 6, loss: 0.27811, speed: 0.19 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.84it/s]global step: 196, epoch: 6, loss: 0.27528, speed: 10.74 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.86it/s]global step: 198, epoch: 6, loss: 0.27250, speed: 10.65 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.86it/s]global step: 200, epoch: 6, loss: 0.26978, speed: 10.58 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.85it/s]global step: 202, epoch: 6, loss: 0.26711, speed: 10.66 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.87it/s]global step: 204, epoch: 6, loss: 0.26450, speed: 10.79 step/s
+global step: 206, epoch: 6, loss: 0.26193, speed: 10.69 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.84it/s]global step: 208, epoch: 6, loss: 0.25941, speed: 10.80 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.83it/s]global step: 210, epoch: 6, loss: 0.25694, speed: 10.63 step/s
+global step: 212, epoch: 6, loss: 0.25453, speed: 10.75 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.85it/s]global step: 214, epoch: 6, loss: 0.25215, speed: 10.76 step/s
+global step: 216, epoch: 6, loss: 0.24982, speed: 10.71 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.87it/s]global step: 218, epoch: 6, loss: 0.24753, speed: 10.83 step/s
+global step: 220, epoch: 6, loss: 0.24528, speed: 10.77 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.93it/s]global step: 222, epoch: 6, loss: 0.24307, speed: 10.84 step/s
+global step: 224, epoch: 6, loss: 0.24090, speed: 11.93 step/s
+100%|██████████| 32/32 [00:14<00:00,  2.14it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+global step: 226, epoch: 7, loss: 0.23877, speed: 0.19 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.87it/s]global step: 228, epoch: 7, loss: 0.23668, speed: 10.85 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.90it/s]global step: 230, epoch: 7, loss: 0.23462, speed: 10.79 step/s
+global step: 232, epoch: 7, loss: 0.23260, speed: 10.80 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.88it/s]global step: 234, epoch: 7, loss: 0.23062, speed: 10.78 step/s
+global step: 236, epoch: 7, loss: 0.22866, speed: 10.68 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.89it/s]global step: 238, epoch: 7, loss: 0.22674, speed: 10.79 step/s
+global step: 240, epoch: 7, loss: 0.22486, speed: 10.67 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.89it/s]global step: 242, epoch: 7, loss: 0.22300, speed: 10.81 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.89it/s]global step: 244, epoch: 7, loss: 0.22118, speed: 10.68 step/s
+global step: 246, epoch: 7, loss: 0.21938, speed: 10.70 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.92it/s]global step: 248, epoch: 7, loss: 0.21761, speed: 10.95 step/s
+global step: 250, epoch: 7, loss: 0.21587, speed: 10.89 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.95it/s]global step: 252, epoch: 7, loss: 0.21416, speed: 10.91 step/s
+global step: 254, epoch: 7, loss: 0.21249, speed: 10.83 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.94it/s]global step: 256, epoch: 7, loss: 0.21085, speed: 11.84 step/s
+100%|██████████| 32/32 [00:15<00:00,  2.13it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+global step: 258, epoch: 8, loss: 0.20922, speed: 0.19 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.84it/s]global step: 260, epoch: 8, loss: 0.20762, speed: 10.67 step/s
+global step: 262, epoch: 8, loss: 0.20604, speed: 10.60 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.84it/s]global step: 264, epoch: 8, loss: 0.20448, speed: 10.79 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.85it/s]global step: 266, epoch: 8, loss: 0.20295, speed: 10.65 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.84it/s]global step: 268, epoch: 8, loss: 0.20143, speed: 10.73 step/s
+global step: 270, epoch: 8, loss: 0.19994, speed: 10.56 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.76it/s]global step: 272, epoch: 8, loss: 0.19847, speed: 10.47 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  5.71it/s]global step: 274, epoch: 8, loss: 0.19702, speed: 5.92 step/s
+global step: 276, epoch: 8, loss: 0.19559, speed: 10.20 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.18it/s]global step: 278, epoch: 8, loss: 0.19419, speed: 10.22 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.27it/s]global step: 280, epoch: 8, loss: 0.19280, speed: 10.02 step/s
+ 81%|████████▏ | 26/32 [00:04<00:00,  6.39it/s]global step: 282, epoch: 8, loss: 0.19144, speed: 10.45 step/s
+global step: 284, epoch: 8, loss: 0.19009, speed: 10.81 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.55it/s]global step: 286, epoch: 8, loss: 0.18876, speed: 10.53 step/s
+global step: 288, epoch: 8, loss: 0.18745, speed: 11.11 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+100%|██████████| 32/32 [00:15<00:00,  2.00it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.71it/s]global step: 290, epoch: 9, loss: 0.18616, speed: 0.18 step/s
+global step: 292, epoch: 9, loss: 0.18489, speed: 10.57 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.74it/s]global step: 294, epoch: 9, loss: 0.18363, speed: 10.57 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.76it/s]global step: 296, epoch: 9, loss: 0.18239, speed: 10.50 step/s
+global step: 298, epoch: 9, loss: 0.18117, speed: 10.65 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.83it/s]global step: 300, epoch: 9, loss: 0.17996, speed: 10.93 step/s
+global step: 302, epoch: 9, loss: 0.17877, speed: 10.60 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.84it/s]global step: 304, epoch: 9, loss: 0.17759, speed: 10.74 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.83it/s]global step: 306, epoch: 9, loss: 0.17643, speed: 10.62 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.84it/s]global step: 308, epoch: 9, loss: 0.17529, speed: 10.55 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.81it/s]global step: 310, epoch: 9, loss: 0.17416, speed: 10.69 step/s
+global step: 312, epoch: 9, loss: 0.17305, speed: 10.71 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.84it/s]global step: 314, epoch: 9, loss: 0.17195, speed: 10.59 step/s
+global step: 316, epoch: 9, loss: 0.17086, speed: 10.76 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.83it/s]global step: 318, epoch: 9, loss: 0.16979, speed: 10.53 step/s
+global step: 320, epoch: 9, loss: 0.16873, speed: 11.52 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+100%|██████████| 32/32 [00:15<00:00,  2.08it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.64it/s]global step: 322, epoch: 10, loss: 0.16768, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.71it/s]global step: 324, epoch: 10, loss: 0.16665, speed: 10.64 step/s
+global step: 326, epoch: 10, loss: 0.16562, speed: 10.50 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.74it/s]global step: 328, epoch: 10, loss: 0.16461, speed: 10.53 step/s
+global step: 330, epoch: 10, loss: 0.16362, speed: 10.58 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.75it/s]global step: 332, epoch: 10, loss: 0.16263, speed: 10.55 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.76it/s]global step: 334, epoch: 10, loss: 0.16166, speed: 10.65 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.77it/s]global step: 336, epoch: 10, loss: 0.16070, speed: 10.69 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.76it/s]global step: 338, epoch: 10, loss: 0.15975, speed: 10.63 step/s
+global step: 340, epoch: 10, loss: 0.15881, speed: 10.65 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.79it/s]global step: 342, epoch: 10, loss: 0.15789, speed: 10.69 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.81it/s]global step: 344, epoch: 10, loss: 0.15697, speed: 10.69 step/s
+global step: 346, epoch: 10, loss: 0.15606, speed: 10.69 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.82it/s]global step: 348, epoch: 10, loss: 0.15516, speed: 10.69 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.82it/s]global step: 350, epoch: 10, loss: 0.15428, speed: 10.71 step/s
+global step: 352, epoch: 10, loss: 0.15340, speed: 11.34 step/s
+100%|██████████| 32/32 [00:15<00:00,  2.07it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+global step: 354, epoch: 11, loss: 0.15254, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.64it/s]global step: 356, epoch: 11, loss: 0.15168, speed: 10.51 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.67it/s]global step: 358, epoch: 11, loss: 0.15084, speed: 10.45 step/s
+global step: 360, epoch: 11, loss: 0.15000, speed: 10.66 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.73it/s]global step: 362, epoch: 11, loss: 0.14917, speed: 10.51 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.75it/s]global step: 364, epoch: 11, loss: 0.14836, speed: 10.73 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.75it/s]global step: 366, epoch: 11, loss: 0.14754, speed: 10.50 step/s
+global step: 368, epoch: 11, loss: 0.14674, speed: 10.76 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.81it/s]global step: 370, epoch: 11, loss: 0.14595, speed: 10.67 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.81it/s]global step: 372, epoch: 11, loss: 0.14517, speed: 10.64 step/s
+global step: 374, epoch: 11, loss: 0.14439, speed: 10.52 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.84it/s]global step: 376, epoch: 11, loss: 0.14362, speed: 10.56 step/s
+global step: 378, epoch: 11, loss: 0.14286, speed: 10.62 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.85it/s]global step: 380, epoch: 11, loss: 0.14211, speed: 10.55 step/s
+global step: 382, epoch: 11, loss: 0.14137, speed: 10.65 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.86it/s]global step: 384, epoch: 11, loss: 0.14063, speed: 11.59 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+100%|██████████| 32/32 [00:15<00:00,  2.01it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.63it/s]global step: 386, epoch: 12, loss: 0.13990, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.66it/s]global step: 388, epoch: 12, loss: 0.13918, speed: 10.47 step/s
+global step: 390, epoch: 12, loss: 0.13847, speed: 10.49 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.66it/s]global step: 392, epoch: 12, loss: 0.13776, speed: 10.62 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.68it/s]global step: 394, epoch: 12, loss: 0.13707, speed: 10.63 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.72it/s]global step: 396, epoch: 12, loss: 0.13637, speed: 10.64 step/s
+global step: 398, epoch: 12, loss: 0.13569, speed: 10.66 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.74it/s]global step: 400, epoch: 12, loss: 0.13501, speed: 10.65 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.76it/s]global step: 402, epoch: 12, loss: 0.13434, speed: 10.75 step/s
+global step: 404, epoch: 12, loss: 0.13367, speed: 10.59 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.77it/s]global step: 406, epoch: 12, loss: 0.13302, speed: 10.59 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.77it/s]global step: 408, epoch: 12, loss: 0.13237, speed: 10.67 step/s
+global step: 410, epoch: 12, loss: 0.13172, speed: 10.67 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.78it/s]global step: 412, epoch: 12, loss: 0.13108, speed: 10.64 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.78it/s]global step: 414, epoch: 12, loss: 0.13045, speed: 10.63 step/s
+global step: 416, epoch: 12, loss: 0.12982, speed: 11.58 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+100%|██████████| 32/32 [00:15<00:00,  2.02it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.61it/s]global step: 418, epoch: 13, loss: 0.12920, speed: 0.18 step/s
+global step: 420, epoch: 13, loss: 0.12859, speed: 10.61 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.73it/s]global step: 422, epoch: 13, loss: 0.12798, speed: 10.60 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.72it/s]global step: 424, epoch: 13, loss: 0.12738, speed: 10.51 step/s
+global step: 426, epoch: 13, loss: 0.12678, speed: 10.50 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.74it/s]global step: 428, epoch: 13, loss: 0.12619, speed: 10.65 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.69it/s]global step: 430, epoch: 13, loss: 0.12560, speed: 10.48 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.65it/s]global step: 432, epoch: 13, loss: 0.12502, speed: 10.33 step/s
+global step: 434, epoch: 13, loss: 0.12445, speed: 9.94 step/s
+ 62%|██████▎   | 20/32 [00:03<00:01,  6.45it/s]global step: 436, epoch: 13, loss: 0.12388, speed: 9.83 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.46it/s]global step: 438, epoch: 13, loss: 0.12331, speed: 10.10 step/s
+global step: 440, epoch: 13, loss: 0.12275, speed: 10.08 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.48it/s]global step: 442, epoch: 13, loss: 0.12219, speed: 10.20 step/s
+global step: 444, epoch: 13, loss: 0.12164, speed: 10.10 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.44it/s]global step: 446, epoch: 13, loss: 0.12110, speed: 10.23 step/s
+global step: 448, epoch: 13, loss: 0.12056, speed: 10.99 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.77000
+100%|██████████| 32/32 [00:16<00:00,  1.98it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.63it/s]global step: 450, epoch: 14, loss: 0.12003, speed: 0.17 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.70it/s]global step: 452, epoch: 14, loss: 0.11950, speed: 10.62 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.73it/s]global step: 454, epoch: 14, loss: 0.11897, speed: 10.65 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.68it/s]global step: 456, epoch: 14, loss: 0.11845, speed: 10.61 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.72it/s]global step: 458, epoch: 14, loss: 0.11793, speed: 10.68 step/s
+ 38%|███▊      | 12/32 [00:01<00:02,  6.72it/s]global step: 460, epoch: 14, loss: 0.11742, speed: 10.51 step/s
+global step: 462, epoch: 14, loss: 0.11691, speed: 10.55 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.74it/s]global step: 464, epoch: 14, loss: 0.11641, speed: 10.54 step/s
+global step: 466, epoch: 14, loss: 0.11591, speed: 10.59 step/s
+ 62%|██████▎   | 20/32 [00:02<00:01,  6.74it/s]global step: 468, epoch: 14, loss: 0.11541, speed: 10.63 step/s
+global step: 470, epoch: 14, loss: 0.11492, speed: 10.71 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.72it/s]global step: 472, epoch: 14, loss: 0.11444, speed: 10.57 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.74it/s]global step: 474, epoch: 14, loss: 0.11395, speed: 10.63 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.77it/s]global step: 476, epoch: 14, loss: 0.11348, speed: 10.69 step/s
+global step: 478, epoch: 14, loss: 0.11300, speed: 10.58 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.73it/s]global step: 480, epoch: 14, loss: 0.11253, speed: 11.47 step/s
+100%|██████████| 32/32 [00:16<00:00,  2.00it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+  6%|▋         | 2/32 [00:00<00:04,  6.44it/s]global step: 482, epoch: 15, loss: 0.11207, speed: 0.17 step/s
+global step: 484, epoch: 15, loss: 0.11160, speed: 10.26 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.53it/s]global step: 486, epoch: 15, loss: 0.11114, speed: 10.46 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.58it/s]global step: 488, epoch: 15, loss: 0.11069, speed: 10.53 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.58it/s]global step: 490, epoch: 15, loss: 0.11024, speed: 10.56 step/s
+ 38%|███▊      | 12/32 [00:01<00:03,  6.59it/s]global step: 492, epoch: 15, loss: 0.10979, speed: 10.67 step/s
+global step: 494, epoch: 15, loss: 0.10935, speed: 10.73 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.65it/s]global step: 496, epoch: 15, loss: 0.10891, speed: 10.48 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.65it/s]global step: 498, epoch: 15, loss: 0.10847, speed: 10.71 step/s
+ 62%|██████▎   | 20/32 [00:03<00:01,  6.55it/s]global step: 500, epoch: 15, loss: 0.10803, speed: 8.59 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.56it/s]global step: 502, epoch: 15, loss: 0.10760, speed: 10.28 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.45it/s]global step: 504, epoch: 15, loss: 0.10718, speed: 9.80 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.46it/s]global step: 506, epoch: 15, loss: 0.10675, speed: 10.21 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.47it/s]global step: 508, epoch: 15, loss: 0.10633, speed: 10.30 step/s
+global step: 510, epoch: 15, loss: 0.10592, speed: 7.33 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.04it/s]global step: 512, epoch: 15, loss: 0.10550, speed: 10.90 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+100%|██████████| 32/32 [00:15<00:00,  2.00it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.51it/s]global step: 514, epoch: 16, loss: 0.10510, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.61it/s]global step: 516, epoch: 16, loss: 0.10469, speed: 10.49 step/s
+global step: 518, epoch: 16, loss: 0.10428, speed: 10.49 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.66it/s]global step: 520, epoch: 16, loss: 0.10388, speed: 10.44 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.64it/s]global step: 522, epoch: 16, loss: 0.10349, speed: 10.46 step/s
+ 38%|███▊      | 12/32 [00:01<00:03,  6.66it/s]global step: 524, epoch: 16, loss: 0.10309, speed: 10.86 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.68it/s]global step: 526, epoch: 16, loss: 0.10270, speed: 10.51 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.70it/s]global step: 528, epoch: 16, loss: 0.10231, speed: 10.49 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.69it/s]global step: 530, epoch: 16, loss: 0.10193, speed: 10.28 step/s
+global step: 532, epoch: 16, loss: 0.10154, speed: 10.20 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.64it/s]global step: 534, epoch: 16, loss: 0.10116, speed: 10.31 step/s
+global step: 536, epoch: 16, loss: 0.10079, speed: 10.32 step/s
+ 81%|████████▏ | 26/32 [00:03<00:00,  6.28it/s]global step: 538, epoch: 16, loss: 0.10041, speed: 10.37 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.28it/s]global step: 540, epoch: 16, loss: 0.10004, speed: 9.66 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.33it/s]global step: 542, epoch: 16, loss: 0.09967, speed: 10.17 step/s
+global step: 544, epoch: 16, loss: 0.09931, speed: 9.24 step/s
+100%|██████████| 32/32 [00:15<00:00,  2.01it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+  6%|▋         | 2/32 [00:00<00:04,  6.49it/s]global step: 546, epoch: 17, loss: 0.09894, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.56it/s]global step: 548, epoch: 17, loss: 0.09858, speed: 10.42 step/s
+ 19%|█▉        | 6/32 [00:00<00:03,  6.60it/s]global step: 550, epoch: 17, loss: 0.09822, speed: 10.39 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.63it/s]global step: 552, epoch: 17, loss: 0.09787, speed: 10.54 step/s
+global step: 554, epoch: 17, loss: 0.09752, speed: 10.41 step/s
+ 38%|███▊      | 12/32 [00:01<00:03,  6.41it/s]global step: 556, epoch: 17, loss: 0.09717, speed: 7.98 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.34it/s]global step: 558, epoch: 17, loss: 0.09682, speed: 9.31 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.30it/s]global step: 560, epoch: 17, loss: 0.09647, speed: 9.50 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.30it/s]global step: 562, epoch: 17, loss: 0.09613, speed: 9.90 step/s
+global step: 564, epoch: 17, loss: 0.09579, speed: 10.02 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.33it/s]global step: 566, epoch: 17, loss: 0.09545, speed: 10.08 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.35it/s]global step: 568, epoch: 17, loss: 0.09511, speed: 10.08 step/s
+ 81%|████████▏ | 26/32 [00:04<00:00,  6.40it/s]global step: 570, epoch: 17, loss: 0.09478, speed: 10.21 step/s
+global step: 572, epoch: 17, loss: 0.09445, speed: 10.29 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.48it/s]global step: 574, epoch: 17, loss: 0.09412, speed: 10.28 step/s
+global step: 576, epoch: 17, loss: 0.09379, speed: 11.13 step/s
+100%|██████████| 32/32 [00:15<00:00,  2.02it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+  6%|▋         | 2/32 [00:00<00:04,  6.44it/s]global step: 578, epoch: 18, loss: 0.09347, speed: 0.18 step/s
+global step: 580, epoch: 18, loss: 0.09315, speed: 10.09 step/s
+ 19%|█▉        | 6/32 [00:00<00:04,  6.47it/s]global step: 582, epoch: 18, loss: 0.09283, speed: 10.22 step/s
+global step: 584, epoch: 18, loss: 0.09251, speed: 10.19 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.48it/s]global step: 586, epoch: 18, loss: 0.09219, speed: 10.18 step/s
+ 38%|███▊      | 12/32 [00:01<00:03,  6.49it/s]global step: 588, epoch: 18, loss: 0.09188, speed: 10.10 step/s
+global step: 590, epoch: 18, loss: 0.09157, speed: 10.13 step/s
+ 50%|█████     | 16/32 [00:02<00:02,  6.47it/s]global step: 592, epoch: 18, loss: 0.09126, speed: 10.31 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.53it/s]global step: 594, epoch: 18, loss: 0.09095, speed: 10.59 step/s
+global step: 596, epoch: 18, loss: 0.09065, speed: 10.37 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.61it/s]global step: 598, epoch: 18, loss: 0.09035, speed: 10.59 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.59it/s]global step: 600, epoch: 18, loss: 0.09004, speed: 10.59 step/s
+global step: 602, epoch: 18, loss: 0.08975, speed: 10.67 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.65it/s]global step: 604, epoch: 18, loss: 0.08945, speed: 10.43 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.66it/s]global step: 606, epoch: 18, loss: 0.08915, speed: 10.53 step/s
+global step: 608, epoch: 18, loss: 0.08886, speed: 11.01 step/s
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+100%|██████████| 32/32 [00:15<00:00,  2.03it/s]
+  6%|▋         | 2/32 [00:00<00:04,  6.28it/s]global step: 610, epoch: 19, loss: 0.08857, speed: 0.18 step/s
+ 12%|█▎        | 4/32 [00:00<00:04,  6.42it/s]global step: 612, epoch: 19, loss: 0.08828, speed: 10.42 step/s
+ 19%|█▉        | 6/32 [00:00<00:04,  6.46it/s]global step: 614, epoch: 19, loss: 0.08799, speed: 10.78 step/s
+ 25%|██▌       | 8/32 [00:01<00:03,  6.51it/s]global step: 616, epoch: 19, loss: 0.08771, speed: 10.31 step/s
+ 31%|███▏      | 10/32 [00:01<00:03,  6.56it/s]global step: 618, epoch: 19, loss: 0.08742, speed: 10.46 step/s
+ 38%|███▊      | 12/32 [00:01<00:03,  6.60it/s]global step: 620, epoch: 19, loss: 0.08714, speed: 10.37 step/s
+ 44%|████▍     | 14/32 [00:02<00:02,  6.65it/s]global step: 622, epoch: 19, loss: 0.08686, speed: 10.71 step/s
+global step: 624, epoch: 19, loss: 0.08659, speed: 10.43 step/s
+ 56%|█████▋    | 18/32 [00:02<00:02,  6.64it/s]global step: 626, epoch: 19, loss: 0.08631, speed: 10.63 step/s
+global step: 628, epoch: 19, loss: 0.08603, speed: 10.43 step/s
+ 69%|██████▉   | 22/32 [00:03<00:01,  6.71it/s]global step: 630, epoch: 19, loss: 0.08576, speed: 10.92 step/s
+ 75%|███████▌  | 24/32 [00:03<00:01,  6.73it/s]global step: 632, epoch: 19, loss: 0.08549, speed: 10.69 step/s
+global step: 634, epoch: 19, loss: 0.08522, speed: 10.46 step/s
+ 88%|████████▊ | 28/32 [00:04<00:00,  6.63it/s]global step: 636, epoch: 19, loss: 0.08495, speed: 10.51 step/s
+global step: 638, epoch: 19, loss: 0.08469, speed: 10.58 step/s
+ 94%|█████████▍| 30/32 [00:04<00:00,  6.66it/s]global step: 640, epoch: 19, loss: 0.08442, speed: 11.29 step/s
+100%|██████████| 32/32 [00:15<00:00,  2.04it/s]
+Evaluation precision: 0.79000, recall: 0.77000, F1: 0.76000
+结束训练
+
+进程已结束，退出代码为 0

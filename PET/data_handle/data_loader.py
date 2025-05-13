@@ -44,5 +44,4 @@ if __name__ == '__main__':
     train_dataloader, dev_dataloader = get_data()
     for i, value in enumerate(train_dataloader):
         print(value)
-        print(value["input_ids"])
         break

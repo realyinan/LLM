@@ -17,7 +17,7 @@ class ProjectConfig(object):
         self.max_label_len = 2
         self.epochs = 20
         self.logging_steps = 2
-        self.valid_steps = 20
+        self.valid_steps = 32
         self.save_dir = r'C:\Users\19981\Documents\GitHub\LLM\PET\checkpoints'
 
 

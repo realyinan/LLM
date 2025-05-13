@@ -46,8 +46,8 @@ class ClassEvaluator(object):
                 }
             }
         """
-        print("goldens-->", self.goldens)
-        print("predictions-->", self.predictions)
+        # print("goldens-->", self.goldens)
+        # print("predictions-->", self.predictions)
         classes, class_metrics, res = sorted(list(set(self.goldens) | set(self.predictions))), {}, {}
 
         res['accuracy'] = round(accuracy_score(self.goldens, self.predictions), round_num)  # 构建全局指标
